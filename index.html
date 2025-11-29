@@ -114,33 +114,78 @@
             gap: 1rem;
         }
 
-        .btn-outline {
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 0.75rem 1.5rem;
-            font-size: 0.875rem;
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-block;
+        /* Button Updates */
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
-        .btn-outline:hover {
+        .btn-primary,
+        .btn-secondary,
+        .btn-outline,
+        .btn-solid {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: #000;
+            border: 1px solid #fff;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
             border-color: #fff;
             background: rgba(255, 255, 255, 0.05);
         }
 
-        .btn-solid {
-            background: #fff;
-            color: #000;
+        /* Header Buttons Specifics */
+        .nav-right .btn-outline {
             padding: 0.75rem 1.5rem;
-            font-size: 0.875rem;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-block;
-            font-weight: 500;
+            font-size: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            background: transparent;
         }
 
-        .btn-solid:hover {
+        .nav-right .btn-solid {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.75rem;
+            background: #fff;
+            color: #000;
+            border: 1px solid #fff;
+        }
+
+        .nav-right .btn-outline:hover {
+            border-color: #fff;
+        }
+
+        .nav-right .btn-solid:hover {
             background: rgba(255, 255, 255, 0.9);
         }
 
@@ -185,25 +230,6 @@
             max-width: 600px;
             line-height: 1.6;
             margin-bottom: 2rem;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            padding: 1rem 3rem;
-            background-color: #ffffff;
-            color: #000000;
-            text-decoration: none;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            border-radius: 2px;
-            transition: all 0.2s;
-            font-family: 'Courier New', monospace;
-        }
-
-        .btn-primary:hover {
-            background-color: #e0e0e0;
         }
 
         /* Features Grid */
@@ -436,6 +462,90 @@
             font-weight: 300;
         }
 
+        /* Membership Section */
+        .membership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .membership-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            position: relative;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .membership-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .membership-card.featured {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 0.625rem;
+            padding: 0.25rem 0.75rem;
+            background: #fff;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-family: 'Courier New', monospace;
+            border-radius: 100px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .card-price {
+            font-size: 3rem;
+            font-weight: 200;
+            margin-bottom: 2rem;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .card-price span {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 3rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .feature-list li::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
         /* CTA Section */
         .cta-section {
             padding: 6rem 0;
@@ -580,6 +690,20 @@
         }
 
         @media (max-width: 768px) {
+            .btn-container {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+            }
+
+            .membership-card {
+                padding: 2rem;
+            }
+
             .container {
                 padding: 0 1.5rem;
             }
@@ -618,7 +742,7 @@
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 2.5rem;
                 margin-bottom: 2rem;
             }
 
@@ -655,7 +779,7 @@
             }
 
             .cta-title {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             .cta-subtitle {
@@ -883,7 +1007,10 @@
                     The world's first AI-optimized package forwarding platform.
                     Secure, encrypted, and efficient international delivery.
                 </p>
-                <a href="https://merships.vercel.app/signup" class="btn-primary">Get Started</a>
+                <div class="btn-container">
+                    <a href="https://merships.vercel.app/signup" class="btn-primary">Get Started</a>
+                    <a href="#membership" class="btn-secondary">View Plans</a>
+                </div>
             </div>
 
             <!-- Features Grid -->
@@ -972,6 +1099,59 @@
                     <p class="protocol-desc">
                         Live shipment monitoring with instant status updates from assignment to delivery.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Section -->
+        <section id="membership">
+            <div class="section-label">PREMIUM ACCESS</div>
+            <h2 class="section-title">Monthly Membership</h2>
+            <div class="membership-grid">
+                <!-- Standard Plan -->
+                <div class="membership-card">
+                    <h3 class="card-title">Standard</h3>
+                    <div class="card-price">$0<span>/mo</span></div>
+                    <ul class="feature-list">
+                        <li>Basic Package Forwarding</li>
+                        <li>Standard Shipping Rates</li>
+                        <li>Email Support</li>
+                        <li>30-Day Storage</li>
+                    </ul>
+                    <a href="https://merships.vercel.app/signup" class="btn-secondary" style="width: 100%">Sign Up
+                        Free</a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="membership-card featured">
+                    <div class="card-badge">POPULAR</div>
+                    <h3 class="card-title">Pro Member</h3>
+                    <div class="card-price">$29<span>/mo</span></div>
+                    <ul class="feature-list">
+                        <li>Priority Processing</li>
+                        <li>Discounted Shipping Rates</li>
+                        <li>24/7 Priority Support</li>
+                        <li>60-Day Free Storage</li>
+                        <li>Consolidation Services</li>
+                        <li>Tax-Free Warehouse Access</li>
+                    </ul>
+                    <a href="https://merships.vercel.app/signup" class="btn-primary" style="width: 100%">Get Pro
+                        Access</a>
+                </div>
+
+                <!-- Business Plan -->
+                <div class="membership-card">
+                    <h3 class="card-title">Business</h3>
+                    <div class="card-price">$99<span>/mo</span></div>
+                    <ul class="feature-list">
+                        <li>API Access</li>
+                        <li>Dedicated Account Manager</li>
+                        <li>Custom Logistics Solutions</li>
+                        <li>Unlimited Storage</li>
+                        <li>White-label Options</li>
+                    </ul>
+                    <a href="https://merships.vercel.app/signup" class="btn-secondary" style="width: 100%">Contact
+                        Sales</a>
                 </div>
             </div>
         </section>
