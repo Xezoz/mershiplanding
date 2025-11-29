@@ -506,6 +506,22 @@
             font-family: 'Courier New', monospace;
         }
 
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s;
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .hero-title {
@@ -564,20 +580,62 @@
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            header {
+                padding: 1.5rem 0;
+            }
+
             .hero-title {
                 font-size: 2.5rem;
+                line-height: 1.15;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-content {
+                margin-bottom: 3rem;
+            }
+
+            .btn-primary {
+                padding: 0.875rem 2rem;
+                font-size: 0.7rem;
             }
 
             .nav-right {
                 gap: 0.5rem;
             }
 
-            .btn-outline span {
-                display: none;
+            .btn-outline,
+            .btn-solid {
+                padding: 0.625rem 1rem;
+                font-size: 0.8rem;
             }
 
             .section-title {
                 font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .stat-value {
+                font-size: 3rem;
+            }
+
+            .protocol-item {
+                padding: 1.5rem;
+            }
+
+            section {
+                padding: 4rem 0;
+            }
+
+            .cta-section {
+                padding: 4rem 0;
             }
 
             .footer-content {
@@ -598,6 +656,188 @@
 
             .cta-title {
                 font-size: 2rem;
+            }
+
+            .cta-subtitle {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            header {
+                padding: 1rem 0;
+            }
+
+            .logo-text {
+                font-size: 1rem;
+            }
+
+            .logo-icon {
+                width: 20px;
+                height: 20px;
+            }
+
+            .logo-icon::after {
+                width: 6px;
+                height: 6px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 1rem 0 3rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-label {
+                font-size: 0.55rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+
+            .btn-primary {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.65rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .btn-outline,
+            .btn-solid {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.75rem;
+            }
+
+            .features-grid {
+                gap: 1.5rem;
+                padding-top: 1.5rem;
+            }
+
+            .feature-number {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .feature-text {
+                font-size: 0.875rem;
+            }
+
+            .scroll-indicator {
+                margin-top: 2rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            .section-label {
+                font-size: 0.55rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .stat-value {
+                font-size: 2.5rem;
+            }
+
+            .stat-label {
+                font-size: 0.55rem;
+            }
+
+            .network-stat {
+                padding: 1.5rem 0;
+            }
+
+            .protocol-item {
+                padding: 1.25rem;
+            }
+
+            .protocol-number {
+                font-size: 0.875rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .protocol-title {
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .protocol-desc {
+                font-size: 0.8rem;
+                line-height: 1.6;
+            }
+
+            .cta-section {
+                padding: 3rem 0;
+            }
+
+            .cta-title {
+                font-size: 1.75rem;
+                margin-bottom: 1rem;
+            }
+
+            .cta-subtitle {
+                font-size: 0.85rem;
+                margin-bottom: 1.5rem;
+            }
+
+            footer {
+                padding: 2rem 0;
+            }
+
+            .footer-right {
+                font-size: 0.55rem;
+            }
+
+            .footer-links a {
+                font-size: 0.7rem;
+            }
+
+            .bg-text {
+                font-size: 35vw;
+                bottom: -10vw;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .hero-title {
+                font-size: 1.75rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .cta-title {
+                font-size: 1.5rem;
+            }
+
+            .stat-value {
+                font-size: 2rem;
+            }
+
+            .nav-right {
+                gap: 0.35rem;
+            }
+
+            .btn-outline,
+            .btn-solid {
+                padding: 0.5rem 0.6rem;
+                font-size: 0.7rem;
             }
         }
     </style>
