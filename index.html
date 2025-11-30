@@ -400,6 +400,77 @@
             border-right: none;
         }
 
+        /* HUD Protocol Section */
+        .protocol-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 4rem;
+        }
+
+        .protocol-item {
+            position: relative;
+            padding: 2rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .protocol-item:hover {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
+        }
+
+        /* Corner Accents for Protocol Items */
+        .protocol-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -1px;
+            width: 20px;
+            height: 1px;
+            background: #fff;
+        }
+
+        .protocol-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -1px;
+            width: 20px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .protocol-number {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 1.5rem;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 0.2em;
+            display: inline-block;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.25rem;
+        }
+
+        .protocol-title {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #fff;
+        }
+
+        .protocol-desc {
+            font-size: 0.875rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 300;
+            max-width: 90%;
+        }
+
         /* HUD Button Styles - Non-Boxy */
         .btn-container {
             display: flex;
